@@ -1,0 +1,56 @@
+%!Adobe-FontList 1.19
+%Locale:0x1409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MinionPro-BoldCn
+FamilyName:Minion Pro
+StyleName:Bold Cond
+FullName:Minion Pro Bold Cond
+MenuName:Minion Pro Cond
+StyleBits:2
+WritingScript:Roman
+OutlineFileName:D:\Users\845857705\Documents\UpOrDown\GDDPKG\UporDownGDD Folder\Document fonts\MinionPro-BoldCn.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:219288
+FileModTime:1361479124
+WeightClass:700
+WidthClass:3
+AngleClass:0
+DesignSize:110
+NameArray:0,Mac,4,Minion Pro Bold Cond
+NameArray:0,Win,1,Minion Pro Cond
+NameArray:0,Win,16,Minion Pro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MinionPro-Regular
+FamilyName:Minion Pro
+StyleName:Regular
+FullName:Minion Pro
+MenuName:Minion Pro
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:D:\Users\845857705\Documents\UpOrDown\GDDPKG\UporDownGDD Folder\Document fonts\MinionPro-Regular.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:218640
+FileModTime:1361481380
+WeightClass:400
+WidthClass:5
+AngleClass:0
+DesignSize:110
+NameArray:0,Mac,4,Minion Pro
+NameArray:0,Win,1,Minion Pro
+%EndFont
+

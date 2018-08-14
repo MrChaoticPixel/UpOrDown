@@ -1,0 +1,87 @@
+ADOBE INDESIGN PRINTING INSTRUCTIONS FOR SERVICE PROVIDER REPORT
+
+PUBLICATION NAME: UporDownGDD.indd
+
+PACKAGE DATE: 14/08/2018 4:03 PM
+Creation Date: 14/08/2018
+Modification Date: 14/08/2018
+
+CONTACT INFORMATION
+
+Company Name: 
+Contact: 
+Address: 
+
+
+
+
+
+Phone: 
+Fax: 
+Email: 
+
+SPECIAL INSTRUCTIONS AND OTHER NOTES
+
+
+
+
+
+
+External Plug-ins 0
+Non Opaque Objects :None
+
+FONTS
+2 Fonts Used; 0 Missing, 0 Embedded, 0 Incomplete, 0 Protected
+
+Fonts Packaged
+- Name: MinionPro-BoldCn; Type: OpenType Type 1, Status: OK
+- Name: MinionPro-Regular; Type: OpenType Type 1, Status: OK
+
+
+COLOURS AND INKS
+4 Process Inks; 0 Spot Inks
+
+- Name and Type: Process Cyan; Angle: 15.000; Lines/Inch: 85.000
+- Name and Type: Process Magenta; Angle: 75.000; Lines/Inch: 85.000
+- Name and Type: Process Yellow; Angle: 0.000; Lines/Inch: 85.000
+- Name and Type: Process Black; Angle: 45.000; Lines/Inch: 85.000
+
+
+LINKS AND IMAGES
+(Missing & Embedded Links Only)
+Links and Images: 3 Links Found; 0 Modified, 0 Missing, 0 Inaccessible
+Images: 0 Embedded, 3 use RGB colour space
+
+
+PRINT SETTINGS
+PPD: Xerox 770 Color EX Server 1.0, (\\DOVEDALE-PRINT1.CHRISTCHURCH.NATCOLL.AC.NZ\chch_main_colour)
+Printing To: Printer
+Number of Copies: 1
+Reader Spreads: No
+Even/Odd Pages: Both
+Pages: All
+Proof: No
+Tiling: None
+Scale: 100%, 100%
+Page Position: Upper Left
+Print Layers: Visible & Printable Layers
+Printer's Marks: None
+Bleed: 0 mm, 0 mm, 0 mm, 0 mm
+Colour: Composite CMYK
+Trapping Mode: None
+Send Image Data: Optimised Subsampling
+OPI/DCS Image Replacement: No
+Page Size: A4
+Paper Dimensions: 209.903 mm x 297.039 mm
+Orientation: Portrait
+Negative: No
+Flip Mode: Off
+
+
+FILE PACKAGE LIST
+
+1. UporDownGDD.indd; type: Adobe InDesign publication; size: 1572K
+2. UporDownGDD.idml; type: InDesign Mark-up Document; size: 57K
+3. UporDownGDD.pdf; type: Adobe Acrobat Document; size: 362K
+4. MinionPro-BoldCn.otf; type: Font file; size: 214K
+5. MinionPro-Regular.otf; type: Font file; size: 213K
