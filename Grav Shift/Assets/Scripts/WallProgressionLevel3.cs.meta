@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a3b843a781264594791f358c5fe787c4
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - ButtonMan: {instanceID: 0}
+  - WallMesh: {instanceID: 0}
+  - WallOn: {fileID: 2100000, guid: 373b43d91ef5cc4409963c749eb7ec26, type: 2}
+  - WallOff: {fileID: 2100000, guid: d932bff1d6bddf144a283b73e6f6cf20, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
