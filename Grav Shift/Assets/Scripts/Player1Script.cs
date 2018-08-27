@@ -59,11 +59,26 @@ public class Player1Script : MonoBehaviour {
     {
         if (facingright == true)
         {
-            transform.localScale = new Vector3(1, transform.localScale.y, transform.localScale.z);
+            if (OnFloor == true)
+            {
+                transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, 1);
+            }
+            else
+            {
+                transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, -1);
+            }
+          
         }
         if (facingleft == true)
         {
-            transform.localScale = new Vector3(-1, transform.localScale.y, transform.localScale.z);
+            if (OnFloor == true)
+            {
+                transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, -1);
+            }
+            else
+            {
+                transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, 1);
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.A) || Input.GetAxis("C1Horizontal") > 0)
@@ -83,17 +98,19 @@ public class Player1Script : MonoBehaviour {
     {
         if (OnPad == true)
         {
-            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.Joystick1Button0))
+            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Joystick1Button0))
             {
-               OnFloor = false;
+               transform.Rotate(180, 0, 0);
+                OnFloor = false;
                OnRoof = true;
                P1RB.useGravity = false;
             }
         }
         if (OnRoofPad == true)
         {
-            if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.Joystick1Button0))
+            if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.Joystick1Button0))
             {
+                transform.Rotate(180, 0, 0);
                 OnFloor = true;
                 OnRoof = false;
                 P1RB.useGravity = true;
@@ -110,7 +127,7 @@ public class Player1Script : MonoBehaviour {
             {
                 if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.Joystick1Button0))
                 {
-                    transform.Rotate(180, 0, 0);
+                    
                     IsJumping = true;
                     P1RB.AddForce(Vector3.up * JmpSpd, ForceMode.Impulse);
                 }
@@ -125,7 +142,7 @@ public class Player1Script : MonoBehaviour {
             {
                 if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.Joystick1Button0))
                 {
-                    transform.Rotate(180, 0, 0);
+                    
                     IsJumping = true;
                     P1RB.AddForce(Vector3.down * JmpSpd, ForceMode.Impulse);
                 }
@@ -193,99 +210,99 @@ public class Player1Script : MonoBehaviour {
         }
         if (collision.gameObject.name == "TeleportPadFloor_01")
         {
-                P1Trans.position = new Vector3(15, 23, P1Trans.position.z);
+                P1Trans.position = new Vector3(15, 21, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadRoof_01")
         {
-            P1Trans.position = new Vector3(0, -3, P1Trans.position.z);
+            P1Trans.position = new Vector3(0, -1, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadFloor_02")
         {
-                P1Trans.position = new Vector3(60, 23, P1Trans.position.z);
+                P1Trans.position = new Vector3(60, 21, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadRoof_02")
         {
-                P1Trans.position = new Vector3(35, -3, P1Trans.position.z);
+                P1Trans.position = new Vector3(35, -1, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadFloor_03")
         {
-            P1Trans.position = new Vector3(90, 23, P1Trans.position.z);
+            P1Trans.position = new Vector3(90, 21, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadRoof_03")
         {
-            P1Trans.position = new Vector3(110, 12, P1Trans.position.z);
+            P1Trans.position = new Vector3(110, 14, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadFloor_04")
         {
-            P1Trans.position = new Vector3(160, 7, P1Trans.position.z);
+            P1Trans.position = new Vector3(160, 5, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadRoof_04")
         {
-            P1Trans.position = new Vector3(150, 12, P1Trans.position.z);
+            P1Trans.position = new Vector3(150, 14, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadFloor_05")
         {
-            P1Trans.position = new Vector3(150, 7, P1Trans.position.z);
+            P1Trans.position = new Vector3(150, 5, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadRoof_05")
         {
-            P1Trans.position = new Vector3(160, 12, P1Trans.position.z);
+            P1Trans.position = new Vector3(160, 14, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadFloor_06")
         {
-            P1Trans.position = new Vector3(185, 23, P1Trans.position.z);
+            P1Trans.position = new Vector3(185, 21, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadRoof_06")
         {
-            P1Trans.position = new Vector3(185, -3, P1Trans.position.z);
+            P1Trans.position = new Vector3(185, -1, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadFloor_07")
         {
-            P1Trans.position = new Vector3(215, 23, P1Trans.position.z);
+            P1Trans.position = new Vector3(215, 21, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadRoof_07")
         {
-            P1Trans.position = new Vector3(215, -3, P1Trans.position.z);
+            P1Trans.position = new Vector3(215, -1, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadFloor_08")
         {
-            P1Trans.position = new Vector3(235, 7, P1Trans.position.z);
+            P1Trans.position = new Vector3(235, 5, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadRoof_08")
         {
-            P1Trans.position = new Vector3(235, 12, P1Trans.position.z);
+            P1Trans.position = new Vector3(235, 14, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadFloor_09")
         {
-            P1Trans.position = new Vector3(235, 7, P1Trans.position.z);
+            P1Trans.position = new Vector3(235, 5, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadFloor_10")
         {
-            P1Trans.position = new Vector3(235, 7, P1Trans.position.z);
+            P1Trans.position = new Vector3(235, 5, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadFloor_11")
         {
-            P1Trans.position = new Vector3(235, 7, P1Trans.position.z);
+            P1Trans.position = new Vector3(235, 5, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadFloor_12")
         {
-            P1Trans.position = new Vector3(235, 7, P1Trans.position.z);
+            P1Trans.position = new Vector3(235, 5, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadRoof_09")
         {
-            P1Trans.position = new Vector3(235, 12, P1Trans.position.z);
+            P1Trans.position = new Vector3(235, 14, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadRoof_10")
         {
-            P1Trans.position = new Vector3(235, 12, P1Trans.position.z);
+            P1Trans.position = new Vector3(235, 14, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadRoof_11")
         {
-            P1Trans.position = new Vector3(235, 12, P1Trans.position.z);
+            P1Trans.position = new Vector3(235, 14, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadRoof_12")
         {
-            P1Trans.position = new Vector3(235, 12, P1Trans.position.z);
+            P1Trans.position = new Vector3(235, 14, P1Trans.position.z);
         }
     }
     private void OnCollisionStay(Collision collision)
@@ -323,99 +340,99 @@ public class Player1Script : MonoBehaviour {
         }
         if (collision.gameObject.name == "TeleportPadFloor_01")
         {
-                P1Trans.position = new Vector3(15, 23, P1Trans.position.z);
+                P1Trans.position = new Vector3(15, 21, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadRoof_01")
         {
-            P1Trans.position = new Vector3(0, -3, P1Trans.position.z);
+            P1Trans.position = new Vector3(0, -1, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadFloor_02")
         {
-                P1Trans.position = new Vector3(60, 23, P1Trans.position.z);
+                P1Trans.position = new Vector3(60, 21, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadRoof_02")
         {
-                P1Trans.position = new Vector3(35, -3, P1Trans.position.z);
+                P1Trans.position = new Vector3(35, -1, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadFloor_03")
         {
-            P1Trans.position = new Vector3(90, 23, P1Trans.position.z);
+            P1Trans.position = new Vector3(90, 21, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadRoof_03")
         {
-            P1Trans.position = new Vector3(110, 12, P1Trans.position.z);
+            P1Trans.position = new Vector3(110, 14, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadFloor_04")
         {
-            P1Trans.position = new Vector3(160, 7, P1Trans.position.z);
+            P1Trans.position = new Vector3(160, 5, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadRoof_04")
         {
-            P1Trans.position = new Vector3(150, 12, P1Trans.position.z);
+            P1Trans.position = new Vector3(150, 14, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadFloor_05")
         {
-            P1Trans.position = new Vector3(150, 7, P1Trans.position.z);
+            P1Trans.position = new Vector3(150, 5, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadRoof_05")
         {
-            P1Trans.position = new Vector3(160, 12, P1Trans.position.z);
+            P1Trans.position = new Vector3(160, 14, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadFloor_06")
         {
-            P1Trans.position = new Vector3(185, 23, P1Trans.position.z);
+            P1Trans.position = new Vector3(185, 21, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadRoof_06")
         {
-            P1Trans.position = new Vector3(185, -3, P1Trans.position.z);
+            P1Trans.position = new Vector3(185, -1, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadFloor_07")
         {
-            P1Trans.position = new Vector3(215, 23, P1Trans.position.z);
+            P1Trans.position = new Vector3(215, 21, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadRoof_07")
         {
-            P1Trans.position = new Vector3(215, -3, P1Trans.position.z);
+            P1Trans.position = new Vector3(215, -1, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadFloor_08")
         {
-            P1Trans.position = new Vector3(235, 7, P1Trans.position.z);
+            P1Trans.position = new Vector3(235, 5, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadRoof_08")
         {
-            P1Trans.position = new Vector3(235, 12, P1Trans.position.z);
+            P1Trans.position = new Vector3(235, 14, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadFloor_09")
         {
-            P1Trans.position = new Vector3(235, 7, P1Trans.position.z);
+            P1Trans.position = new Vector3(235, 5, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadFloor_10")
         {
-            P1Trans.position = new Vector3(235, 7, P1Trans.position.z);
+            P1Trans.position = new Vector3(235, 5, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadFloor_11")
         {
-            P1Trans.position = new Vector3(235, 7, P1Trans.position.z);
+            P1Trans.position = new Vector3(235, 5, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadFloor_12")
         {
-            P1Trans.position = new Vector3(235, 7, P1Trans.position.z);
+            P1Trans.position = new Vector3(235, 5, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadRoof_09")
         {
-            P1Trans.position = new Vector3(235, 12, P1Trans.position.z);
+            P1Trans.position = new Vector3(235, 14, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadRoof_10")
         {
-            P1Trans.position = new Vector3(235, 12, P1Trans.position.z);
+            P1Trans.position = new Vector3(235, 14, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadRoof_11")
         {
-            P1Trans.position = new Vector3(235, 12, P1Trans.position.z);
+            P1Trans.position = new Vector3(235, 14, P1Trans.position.z);
         }
          if (collision.gameObject.name == "TeleportPadRoof_12")
         {
-            P1Trans.position = new Vector3(235, 12, P1Trans.position.z);
+            P1Trans.position = new Vector3(235, 14, P1Trans.position.z);
         }
     }
     private void OnCollisionExit(Collision collision)
