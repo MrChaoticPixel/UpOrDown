@@ -18,6 +18,9 @@ public class WeightedBox : MonoBehaviour {
         Grav = false;
         NoGrav = false;
 
+       // Physics.IgnoreCollision(GameObject.Find("PushableBlock_01 1").GetComponent<Collider>(), GetComponent<Collider>());
+       // Physics.IgnoreCollision(GameObject.Find("PushableBlock_01 2").GetComponent<Collider>(), GetComponent<Collider>());
+
 
     }
 	
@@ -160,6 +163,14 @@ public class WeightedBox : MonoBehaviour {
         {
             BoxTrans.position = new Vector3(215, -3, BoxTrans.position.z);
         }
+       /* if (collision.gameObject.name == "TeleportPadFloor_UI1")
+        {
+            BoxTrans.position = new Vector3(-55, -50, BoxTrans.position.z);
+        }
+        if (collision.gameObject.name == "TeleportPadFloor_UI2")
+        {
+            BoxTrans.position = new Vector3(55, 100, BoxTrans.position.z);
+        }*/
     }
     private void OnCollisionExit(Collision collision)
     {

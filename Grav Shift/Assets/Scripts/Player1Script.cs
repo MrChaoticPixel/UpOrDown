@@ -96,26 +96,34 @@ public class Player1Script : MonoBehaviour {
         }
     public void HandleChangeGrav()
     {
-        if (OnPad == true)
+        if (OnFloor == true)
         {
-            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Joystick1Button0))
+            if (OnPad == true)
             {
-               transform.Rotate(180, 0, 0);
-                OnFloor = false;
-               OnRoof = true;
-               P1RB.useGravity = false;
+                if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Joystick1Button0))
+                {
+                    transform.Rotate(180, 0, 0);
+                    OnFloor = false;
+                    OnRoof = true;
+                    P1RB.useGravity = false;
+                }
             }
         }
-        if (OnRoofPad == true)
+   
+        if (OnRoof == true)
         {
-            if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.Joystick1Button0))
+            if (OnRoofPad == true)
             {
-                transform.Rotate(180, 0, 0);
-                OnFloor = true;
-                OnRoof = false;
-                P1RB.useGravity = true;
+                if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.Joystick1Button0))
+                {
+                    transform.Rotate(180, 0, 0);
+                    OnFloor = true;
+                    OnRoof = false;
+                    P1RB.useGravity = true;
+                }
             }
         }
+     
     }
 
     public void HandleJumping()

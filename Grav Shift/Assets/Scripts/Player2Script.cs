@@ -87,26 +87,34 @@ public class Player2Script : MonoBehaviour {
     }
     public void HandleChangeGrav()
     {
-        if (OnPad == true)
+        if (OnFloor == true)
         {
-            if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Joystick2Button0))
+            if (OnPad == true)
             {
-                transform.Rotate(180, 0, 0);
-                OnFloor = false;
-                OnRoof = true;
-                P2RB.useGravity = false;
+                if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Joystick2Button0))
+                {
+                    transform.Rotate(180, 0, 0);
+                    OnFloor = false;
+                    OnRoof = true;
+                    P2RB.useGravity = false;
+                }
             }
         }
-        if (OnRoofPad == true)
+     
+        if (OnRoof == true)
         {
-            if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.Joystick2Button0))
+            if (OnRoofPad == true)
             {
-                transform.Rotate(180, 0, 0);
-                OnFloor = true;
-                OnRoof = false;
-                P2RB.useGravity = true;
+                if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.Joystick2Button0))
+                {
+                    transform.Rotate(180, 0, 0);
+                    OnFloor = true;
+                    OnRoof = false;
+                    P2RB.useGravity = true;
+                }
             }
         }
+       
     }
 
     public void HandleJumping()
