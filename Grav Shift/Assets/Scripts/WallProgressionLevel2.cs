@@ -11,13 +11,19 @@ public class WallProgressionLevel2 : MonoBehaviour {
     public bool Wall1PortalActive, Wall2PortalActive, Wall3PortalActive, Wall4PortalActive, Wall5PortalActive, Wall6PortalActive;
     public bool Section1Complete, Section2Complete, Section3Complete, Section4Complete, Section5Complete, Section6Complete;
     public Transform Plyr1, Plyr2, MainCam;
-    public GameObject victory;
+    public GameObject victory, portal1, portal2, portal3, portal4, portal5, portal6;
     
     
 
 
 	// Use this for initialization
 	void Start () {
+        portal1.SetActive(false);
+        portal2.SetActive(false);
+        portal3.SetActive(false);
+        portal4.SetActive(false);
+        portal5.SetActive(false);
+        portal6.SetActive(false);
 
         Section1Complete = false;
         Section2Complete = false;
@@ -54,66 +60,78 @@ public class WallProgressionLevel2 : MonoBehaviour {
         if (ButtonMan.Wall1 == true)
         {
             //Debug.Log("Hello");
+            portal1.SetActive(true);
             WallMesh1.material = WallOn;
             Wall1PortalActive = true;
         }
         else
         {
+            portal1.SetActive(false);
             WallMesh1.material = WallOff;
             Wall1PortalActive = false;
         }
         if (ButtonMan.Wall2 == true)
         {
             //Debug.Log("Hello");
+            portal2.SetActive(true);
             WallMesh2.material = WallOn;
             Wall2PortalActive = true;
         }
         else
         {
+            portal2.SetActive(false);
             WallMesh2.material = WallOff;
             Wall2PortalActive = false;
         }
         if (ButtonMan.Wall3 == true)
         {
             //Debug.Log("Hello");
+            portal3.SetActive(true);
             WallMesh3.material = WallOn;
             Wall3PortalActive = true;
         }
         else
         {
+            portal3.SetActive(false);
             WallMesh3.material = WallOff;
             Wall3PortalActive = false;
         }
         if (ButtonMan.Wall4 == true)
         {
             //Debug.Log("Hello");
+            portal4.SetActive(true);
             WallMesh4.material = WallOn;
             Wall4PortalActive = true;
         }
         else
         {
+            portal4.SetActive(false);
             WallMesh4.material = WallOff;
             Wall4PortalActive = false;
         }
         if (ButtonMan.Wall5 == true)
         {
             //Debug.Log("Hello");
+            portal5.SetActive(true);
             WallMesh5.material = WallOn;
             Wall5PortalActive = true;
         }
         else
         {
+            portal5.SetActive(false);
             WallMesh5.material = WallOff;
             Wall5PortalActive = false;
         }
         if (ButtonMan.Wall6 == true)
         {
             //Debug.Log("Hello");
+            portal6.SetActive(true);
             WallMesh6.material = WallOn;
             Wall6PortalActive = true;
         }
         else
         {
+            portal6.SetActive(false);
             WallMesh6.material = WallOff;
             Wall6PortalActive = false;
         }

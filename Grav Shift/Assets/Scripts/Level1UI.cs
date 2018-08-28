@@ -72,14 +72,14 @@ public class Level1UI : MonoBehaviour {
         {
             Plyr1.position = new Vector3(80, Plyr1.position.y, Plyr1.position.z);
             Plyr2.position = new Vector3(80, Plyr2.position.y, Plyr2.position.z);
-            Box1.position = new Vector3(110, -3, Box1.position.z);
+            Box1.position = new Vector3(110, -2.8f, Box1.position.z);
         }
         if (Section4 == true)
         {
             Plyr1.position = new Vector3(130, Plyr1.position.y, Plyr1.position.z);
             Plyr2.position = new Vector3(130, Plyr2.position.y, Plyr2.position.z);
-            Box2.position = new Vector3(135, -3, Box2.position.z);
-            Box3.position = new Vector3(140, -3, Box3.position.z);
+            Box2.position = new Vector3(135, -2.8f, Box2.position.z);
+            Box3.position = new Vector3(140, -2.8f, Box3.position.z);
         }
     }
 }

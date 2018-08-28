@@ -14,6 +14,8 @@ public class GameUI : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
+        Time.timeScale = 1;
+
         Level1Complete = PlayerPrefs.GetFloat("Level1Complete", Level1Complete);
         Level2Complete = PlayerPrefs.GetFloat("Level2Complete", Level2Complete);
         Level3Complete = PlayerPrefs.GetFloat("Level3Complete", Level3Complete);
