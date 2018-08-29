@@ -1,6 +1,6 @@
-WindowsStandalone
+OSXStandalone
 PlayerPath?
-D:/Users/845860275/Desktop/Desktop.exe
+D:/GitHub Repository/GravShift/UpOrDown/GravShiftMac/GravShiftMacBuild.app
 SceneListBegin?
 Assets/Scenes/Main.unity
 Assets/Scenes/Level 1.unity
@@ -230,7 +230,6 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 810744daa0b5c7c25b495b531ef9cff2 Assembly-CSharp.dll:.Button
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 2a85ada889f6c9855d3d079f791b4ab2 Assembly-CSharp.dll:.Level3UI
-b09ca5c4145b1049f79a1f5481dcefe3 Assembly-CSharp-firstpass.dll:.GoogleAnalyticsV4
 bc79872c81f3cda9be1ec427f70f92aa Vuforia.UnityExtensions.dll:Vuforia.AnchorBehaviour
 0561521e336e270e6e5a9c61387cb838 Vuforia.UnityExtensions.dll:Vuforia.AnchorInputListenerBehaviour
 bc79872c81f3cda9be1ec427f70f92aa Vuforia.UnityExtensions.dll:Vuforia.AnchorStageBehaviour
@@ -299,3 +298,4 @@ a924c90a95cf65003f662aa5e30abb6b Vuforia.UnityExtensions.dll:Vuforia.VuforiaConf
 01e6f145049f3a676df6dc247eabf176 Vuforia.UnityExtensions.dll:Vuforia.VuMarkBehaviour
 3d1b89310e77c34bc0c8d7132231345c Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 05524b8f659e7bfe5756d1335fec24ba Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
+b09ca5c4145b1049f79a1f5481dcefe3 Assembly-CSharp-firstpass.dll:.GoogleAnalyticsV4
