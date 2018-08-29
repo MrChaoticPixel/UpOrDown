@@ -1,13 +1,13 @@
 WindowsStandalone
 PlayerPath?
-J:/.exe
+D:/Users/845860275/Desktop/Desktop.exe
 SceneListBegin?
 Assets/Scenes/Main.unity
 Assets/Scenes/Level 1.unity
 Assets/Scenes/Level 2.unity
 Assets/Scenes/Level 3.unity
 SceneListEnd?
-f6841078c80e02483f13df56ebaa0abf Assembly-CSharp.dll:.Level1UI
+f7bdfda4b15f5fb49f08b0530fdc0312 Assembly-CSharp.dll:.Level1UI
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 cf455f7a806648c6ed4c7d3e3f8a0e03 UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
 13bdb7c23815c33a33b37b0ba8dd39be UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
@@ -20,7 +20,7 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 30afa8783a8bbee2e465ec9ce1efaee2 UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 30afa8783a8bbee2e465ec9ce1efaee2 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 607d64d2c4bc76ac9876e6f7b9cc7edf UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
-af10a8dbc2e220911c232993be7552cc Assembly-CSharp.dll:.Player2Script
+788bfa6cefda51814356552518bc8cf2 Assembly-CSharp.dll:.Player2Script
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 49cd62a578efc0a599b810a2b66cd49c UnityEngine.UI.dll:UnityEngine.UI.Button
@@ -53,7 +53,7 @@ c63db43c730fa2cbb8ca07de15898cb6 UnityEngine.UI.dll:UnityEngine.UI.Toggle
 f61c0793411f10cf5fbfa1473fef5ef2 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 86d36c43c53541d667100dc90b89cfba UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 1b8c02d0aa82fbf036a2b9b2d713eec3 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
-f23845151e98bb65ccef090834e1a0ef Assembly-CSharp.dll:.WeightedBox
+37413b6ec429fd89eebc8e23f6b7d40a Assembly-CSharp.dll:.WeightedBox
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 49cd62a578efc0a599b810a2b66cd49c UnityEngine.UI.dll:UnityEngine.UI.Button
@@ -186,17 +186,17 @@ a924c90a95cf65003f662aa5e30abb6b Vuforia.UnityExtensions.dll:Vuforia.VuforiaConf
 01e6f145049f3a676df6dc247eabf176 Vuforia.UnityExtensions.dll:Vuforia.VuMarkBehaviour
 3d1b89310e77c34bc0c8d7132231345c Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 05524b8f659e7bfe5756d1335fec24ba Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
-aaac4e2a0e791c7c9425fc33d9356158 Assembly-CSharp.dll:.Level2UI
+2f6bdce3976c9fd4b41e6a83cb2cafc7 Assembly-CSharp.dll:.Level2UI
 a36983aa6d4a8e0668c3fc7fb4b1afc5 Assembly-CSharp.dll:.ButtonMngr
 01cb5860a1a6863c971db04c22231eb6 Assembly-CSharp.dll:.ButtonMngrLevel2
-af10a8dbc2e220911c232993be7552cc Assembly-CSharp.dll:.Player1Script
-0e52324eca06b733bec49018f1fc5691 Assembly-CSharp.dll:.WallProgression
+788bfa6cefda51814356552518bc8cf2 Assembly-CSharp.dll:.Player1Script
+8daa1f674dc40f14d6674df3d5cf9a31 Assembly-CSharp.dll:.WallProgression
 05524b8f659e7bfe5756d1335fec24ba Substance.Game.dll:Substance.Game.Runtime
 4104a761347d1fb85c73dc6ebe8dc979 Substance.Game.dll:Substance.Game.Substance
 5d83844f875ad0b0f58e86fe45263b26 Substance.Game.dll:Substance.Game.SubstanceGraph
-c1ad949be337a09a2889f5e51731bb8e Assembly-CSharp.dll:.WallProgressionLevel3
-42f42700e41d543538b92e4a25b4871e Assembly-CSharp.dll:.WallProgressionLevel2
-e36d03c8e8f75d84ff44b96e0ad11305 Assembly-CSharp.dll:.GameUI
+77a6a0325433db42e059e4a8de92a472 Assembly-CSharp.dll:.WallProgressionLevel3
+5bf637080f1259304515ce08788135ac Assembly-CSharp.dll:.WallProgressionLevel2
+0eebf763f4ed0bda71c717a19a8fd7d2 Assembly-CSharp.dll:.GameUI
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
 60b2bb652410a5867a5ab9a01cd38461 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkDiscovery
@@ -229,7 +229,8 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 810744daa0b5c7c25b495b531ef9cff2 Assembly-CSharp.dll:.Button
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
-d149c17d96d4fdca1601d05ae81194bb Assembly-CSharp.dll:.Level3UI
+2a85ada889f6c9855d3d079f791b4ab2 Assembly-CSharp.dll:.Level3UI
+b09ca5c4145b1049f79a1f5481dcefe3 Assembly-CSharp-firstpass.dll:.GoogleAnalyticsV4
 bc79872c81f3cda9be1ec427f70f92aa Vuforia.UnityExtensions.dll:Vuforia.AnchorBehaviour
 0561521e336e270e6e5a9c61387cb838 Vuforia.UnityExtensions.dll:Vuforia.AnchorInputListenerBehaviour
 bc79872c81f3cda9be1ec427f70f92aa Vuforia.UnityExtensions.dll:Vuforia.AnchorStageBehaviour
@@ -264,7 +265,7 @@ a924c90a95cf65003f662aa5e30abb6b Vuforia.UnityExtensions.dll:Vuforia.VuforiaConf
 3d1b89310e77c34bc0c8d7132231345c Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 05524b8f659e7bfe5756d1335fec24ba Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
 01cb5860a1a6863c971db04c22231eb6 Assembly-CSharp.dll:.ButtonMngrLevel3
-5f12b4bb28626022e02b9db7674f6454 Assembly-CSharp.dll:.PauseUI
+be61db24caebdddafc6b3b64d29fe02a Assembly-CSharp.dll:.PauseUI
 bc79872c81f3cda9be1ec427f70f92aa Vuforia.UnityExtensions.dll:Vuforia.AnchorBehaviour
 0561521e336e270e6e5a9c61387cb838 Vuforia.UnityExtensions.dll:Vuforia.AnchorInputListenerBehaviour
 bc79872c81f3cda9be1ec427f70f92aa Vuforia.UnityExtensions.dll:Vuforia.AnchorStageBehaviour
