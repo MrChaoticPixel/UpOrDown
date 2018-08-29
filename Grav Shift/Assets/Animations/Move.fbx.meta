@@ -1,0 +1,219 @@
+fileFormatVersion: 2
+guid: c0808b9b1ee2f5b44a94ae1e04ebc078
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: ctrl_L_Arm01
+    100004: ctrl_L_Arm02
+    100006: ctrl_L_Arm03
+    100008: ctrl_L_Arm04
+    100010: ctrl_L_Arm05
+    100012: ctrl_L_Shoulder
+    100014: ctrl_L_Wheel01
+    100016: ctrl_L_Wheel02
+    100018: ctrl_LowerBody
+    100020: joint1
+    100022: joint10
+    100024: joint11
+    100026: joint12
+    100028: joint13
+    100030: joint14
+    100032: joint15
+    100034: joint16
+    100036: joint17
+    100038: joint18
+    100040: joint19
+    100042: joint2
+    100044: joint20
+    100046: joint3
+    100048: joint4
+    100050: joint5
+    100052: joint6
+    100054: joint7
+    100056: joint8
+    100058: joint9
+    100060: nurbsCircle10
+    100062: nurbsCircle6
+    100064: nurbsCircle7
+    100066: nurbsCircle8
+    100068: nurbsCircle9
+    100070: P1_Body
+    100072: P1_Eyes
+    100074: P1_Head
+    100076: P1_LeftWheel
+    100078: P1_RightWheel
+    100080: Player1_Controls
+    100082: Player1_Geo
+    100084: Player1_Joints
+    100086: R_Shoulder
+    400000: //RootNode
+    400002: ctrl_L_Arm01
+    400004: ctrl_L_Arm02
+    400006: ctrl_L_Arm03
+    400008: ctrl_L_Arm04
+    400010: ctrl_L_Arm05
+    400012: ctrl_L_Shoulder
+    400014: ctrl_L_Wheel01
+    400016: ctrl_L_Wheel02
+    400018: ctrl_LowerBody
+    400020: joint1
+    400022: joint10
+    400024: joint11
+    400026: joint12
+    400028: joint13
+    400030: joint14
+    400032: joint15
+    400034: joint16
+    400036: joint17
+    400038: joint18
+    400040: joint19
+    400042: joint2
+    400044: joint20
+    400046: joint3
+    400048: joint4
+    400050: joint5
+    400052: joint6
+    400054: joint7
+    400056: joint8
+    400058: joint9
+    400060: nurbsCircle10
+    400062: nurbsCircle6
+    400064: nurbsCircle7
+    400066: nurbsCircle8
+    400068: nurbsCircle9
+    400070: P1_Body
+    400072: P1_Eyes
+    400074: P1_Head
+    400076: P1_LeftWheel
+    400078: P1_RightWheel
+    400080: Player1_Controls
+    400082: Player1_Geo
+    400084: Player1_Joints
+    400086: R_Shoulder
+    2100000: lambert1
+    2300000: P1_Eyes
+    2300002: P1_Head
+    2300004: P1_LeftWheel
+    2300006: P1_RightWheel
+    3300000: P1_Eyes
+    3300002: P1_Head
+    3300004: P1_LeftWheel
+    3300006: P1_RightWheel
+    4300000: P1_RightWheel
+    4300002: P1_LeftWheel
+    4300004: P1_Body
+    4300006: P1_Head
+    4300008: P1_Eyes
+    7400000: Move
+    9500000: //RootNode
+    13700000: P1_Body
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Move
+      takeName: Take 001
+      firstFrame: 3
+      lastFrame: 50
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Level1UI : MonoBehaviour {
 
+    public GoogleAnalyticsV4 G4;
     public bool Section1, Section2, Section3, Section4;
     public Transform Box1, Box2, Box3, Plyr1, Plyr2;
     public WallProgression SectionOne, SectionTwo, SectionThree, SectionFour;
@@ -57,6 +58,16 @@ public class Level1UI : MonoBehaviour {
     }
     public void HandleResetButton()
     {
+        G4.LogEvent("PressButton", "ResetButtonButton", "HasPressed", 1);
+
+        // Builder Hit with all Event parameters.
+        G4.LogEvent(new EventHitBuilder()
+            .SetEventCategory("PressButton")
+            .SetEventAction("ResetButtonButton")
+            .SetEventLabel("HasPressed")
+            .SetEventValue(1));
+
+        Debug.Log("Sent");
         if (Section1 == true)
         {
             Plyr1.position = new Vector3(-20, Plyr1.position.y, Plyr1.position.z);

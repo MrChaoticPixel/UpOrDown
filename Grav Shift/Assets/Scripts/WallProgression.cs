@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class WallProgression : MonoBehaviour {
 
+    public AudioSource Portal;
     public ButtonMngr ButtonMan;
     public MeshRenderer WallMesh1, WallMesh2, WallMesh3, WallMesh4;
     public Material WallOn, WallOff;
@@ -17,6 +18,8 @@ public class WallProgression : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+        Portal = GetComponent<AudioSource>();
 
         portal1.SetActive(false);
         portal2.SetActive(false);
@@ -52,6 +55,7 @@ public class WallProgression : MonoBehaviour {
         if (ButtonMan.Wall1 == true)
         {
             //Debug.Log("Hello");
+            //Portal.Play();
             portal1.SetActive(true);
             WallMesh1.material = WallOn;
             Wall1PortalActive = true;
@@ -64,6 +68,7 @@ public class WallProgression : MonoBehaviour {
         if (ButtonMan.Wall2 == true)
         {
             //Debug.Log("Hello");
+            //Portal.Play();
             portal2.SetActive(true);
             WallMesh2.material = WallOn;
             Wall2PortalActive = true;
@@ -76,6 +81,7 @@ public class WallProgression : MonoBehaviour {
         if (ButtonMan.Wall3 == true)
         {
             //Debug.Log("Hello");
+            //Portal.Play();
             portal3.SetActive(true);
             WallMesh3.material = WallOn;
             Wall3PortalActive = true;
@@ -88,6 +94,7 @@ public class WallProgression : MonoBehaviour {
         if (ButtonMan.Wall4 == true)
         {
             //Debug.Log("Hello");
+            //Portal.Play();
             portal4.SetActive(true);
             WallMesh4.material = WallOn;
             Wall4PortalActive = true;
@@ -106,6 +113,7 @@ public class WallProgression : MonoBehaviour {
         {
             if (Wall1PortalActive == true)
             {
+                Portal.Play();
                 Plyr1.position = new Vector3(30, Plyr1.position.y, Plyr1.position.z);
                 Plyr2.position = new Vector3(30, Plyr2.position.y, Plyr2.position.z);
                 MainCam.position = new Vector3(50, MainCam.position.y, MainCam.position.z);
@@ -114,6 +122,7 @@ public class WallProgression : MonoBehaviour {
             }
             if (Wall2PortalActive == true)
             {
+                Portal.Play();
                 Plyr1.position = new Vector3(80, Plyr1.position.y, Plyr1.position.z);
                 Plyr2.position = new Vector3(80, Plyr2.position.y, Plyr2.position.z);
                 MainCam.position = new Vector3(100, MainCam.position.y, MainCam.position.z);
@@ -122,7 +131,7 @@ public class WallProgression : MonoBehaviour {
             }
             if (Wall3PortalActive == true)
             {
-
+                Portal.Play();
                 Plyr1.position = new Vector3(130, Plyr1.position.y, Plyr1.position.z);
                 Plyr2.position = new Vector3(130, Plyr2.position.y, Plyr2.position.z);
                 MainCam.position = new Vector3(150, MainCam.position.y, MainCam.position.z);
@@ -131,6 +140,7 @@ public class WallProgression : MonoBehaviour {
             }
             if (Wall4PortalActive == true)
             {
+                Portal.Play();
                 GameUI.Level1Complete = 1;
                 PlayerPrefs.SetFloat("Level1Complete", GameUI.Level1Complete);
                 SceneManager.LoadScene("Main");
