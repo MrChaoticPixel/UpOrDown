@@ -1,0 +1,98 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Idle
+  m_Mask: 00000000000000000100000000000000000000000100000001000000010000000100000000000000000000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Player1_Controls
+    m_Weight: 1
+  - m_Path: Player1_Controls/ctrl_L_Shoulder
+    m_Weight: 1
+  - m_Path: Player1_Controls/ctrl_L_Shoulder/ctrl_L_Arm01
+    m_Weight: 1
+  - m_Path: Player1_Controls/ctrl_L_Shoulder/ctrl_L_Arm01/ctrl_L_Arm02
+    m_Weight: 1
+  - m_Path: Player1_Controls/ctrl_L_Shoulder/ctrl_L_Arm01/ctrl_L_Arm02/ctrl_L_Arm03
+    m_Weight: 1
+  - m_Path: Player1_Controls/ctrl_L_Shoulder/ctrl_L_Arm01/ctrl_L_Arm02/ctrl_L_Arm03/ctrl_L_Arm04
+    m_Weight: 1
+  - m_Path: Player1_Controls/ctrl_L_Shoulder/ctrl_L_Arm01/ctrl_L_Arm02/ctrl_L_Arm03/ctrl_L_Arm04/ctrl_L_Arm05
+    m_Weight: 1
+  - m_Path: Player1_Controls/ctrl_L_Wheel01
+    m_Weight: 0
+  - m_Path: Player1_Controls/ctrl_L_Wheel02
+    m_Weight: 0
+  - m_Path: Player1_Controls/ctrl_LowerBody
+    m_Weight: 0
+  - m_Path: Player1_Controls/R_Shoulder
+    m_Weight: 1
+  - m_Path: Player1_Controls/R_Shoulder/nurbsCircle7
+    m_Weight: 0
+  - m_Path: Player1_Controls/R_Shoulder/nurbsCircle7/nurbsCircle8
+    m_Weight: 0
+  - m_Path: Player1_Controls/R_Shoulder/nurbsCircle7/nurbsCircle8/nurbsCircle10
+    m_Weight: 0
+  - m_Path: Player1_Controls/R_Shoulder/nurbsCircle7/nurbsCircle8/nurbsCircle10/nurbsCircle9
+    m_Weight: 0
+  - m_Path: Player1_Controls/R_Shoulder/nurbsCircle7/nurbsCircle8/nurbsCircle10/nurbsCircle9/nurbsCircle6
+    m_Weight: 0
+  - m_Path: Player1_Geo
+    m_Weight: 1
+  - m_Path: Player1_Geo/P1_Body
+    m_Weight: 1
+  - m_Path: Player1_Geo/P1_Body/P1_Head
+    m_Weight: 1
+  - m_Path: Player1_Geo/P1_Body/P1_Head/P1_Eyes
+    m_Weight: 1
+  - m_Path: Player1_Geo/P1_LeftWheel
+    m_Weight: 0
+  - m_Path: Player1_Geo/P1_RightWheel
+    m_Weight: 0
+  - m_Path: Player1_Joints
+    m_Weight: 1
+  - m_Path: Player1_Joints/joint16
+    m_Weight: 1
+  - m_Path: Player1_Joints/joint16/joint15
+    m_Weight: 1
+  - m_Path: Player1_Joints/joint16/joint15/joint1
+    m_Weight: 1
+  - m_Path: Player1_Joints/joint16/joint15/joint1/joint2
+    m_Weight: 1
+  - m_Path: Player1_Joints/joint16/joint15/joint1/joint2/joint3
+    m_Weight: 1
+  - m_Path: Player1_Joints/joint16/joint15/joint1/joint2/joint3/joint4
+    m_Weight: 1
+  - m_Path: Player1_Joints/joint16/joint15/joint1/joint2/joint3/joint4/joint5
+    m_Weight: 1
+  - m_Path: Player1_Joints/joint16/joint15/joint1/joint2/joint3/joint4/joint5/joint6
+    m_Weight: 1
+  - m_Path: Player1_Joints/joint16/joint15/joint1/joint2/joint3/joint4/joint5/joint6/joint7
+    m_Weight: 1
+  - m_Path: Player1_Joints/joint16/joint15/joint8
+    m_Weight: 1
+  - m_Path: Player1_Joints/joint16/joint15/joint8/joint9
+    m_Weight: 1
+  - m_Path: Player1_Joints/joint16/joint15/joint8/joint9/joint10
+    m_Weight: 1
+  - m_Path: Player1_Joints/joint16/joint15/joint8/joint9/joint10/joint11
+    m_Weight: 1
+  - m_Path: Player1_Joints/joint16/joint15/joint8/joint9/joint10/joint11/joint12
+    m_Weight: 1
+  - m_Path: Player1_Joints/joint16/joint15/joint8/joint9/joint10/joint11/joint12/joint13
+    m_Weight: 1
+  - m_Path: Player1_Joints/joint16/joint15/joint8/joint9/joint10/joint11/joint12/joint13/joint14
+    m_Weight: 1
+  - m_Path: Player1_Joints/joint18
+    m_Weight: 1
+  - m_Path: Player1_Joints/joint18/joint19
+    m_Weight: 1
+  - m_Path: Player1_Joints/joint20
+    m_Weight: 1
+  - m_Path: Player1_Joints/joint20/joint17
+    m_Weight: 1

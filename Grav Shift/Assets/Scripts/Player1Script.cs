@@ -1,9 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class Player1Script : MonoBehaviour {
 
+    public GoogleAnalyticsV4 G4;
+    public AudioSource Teleport, Gravity;
+    private Animator P1Anim;
     private Rigidbody P1RB;
     private GameObject Ground;
     private Transform P1Trans;
@@ -18,6 +22,7 @@ public class Player1Script : MonoBehaviour {
     {
         facingright = true;
         facingleft = false;
+        P1Anim = GetComponent<Animator>();
         P1RB = GetComponent<Rigidbody>();
         P1Trans = GetComponent<Transform>();
         OnPad = false;
@@ -102,6 +107,17 @@ public class Player1Script : MonoBehaviour {
             {
                 if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Joystick1Button0))
                 {
+                    G4.LogEvent("ChangedGravity", "GravityUp", "HasPressed", 1);
+
+                    // Builder Hit with all Event parameters.
+                    G4.LogEvent(new EventHitBuilder()
+                        .SetEventCategory("ChangedGravity")
+                        .SetEventAction("GravityUp")
+                        .SetEventLabel("HasPressed")
+                        .SetEventValue(1));
+
+                    Debug.Log("Sent");
+                    Gravity.Play();
                     transform.Rotate(180, 0, 0);
                     OnFloor = false;
                     OnRoof = true;
@@ -116,6 +132,17 @@ public class Player1Script : MonoBehaviour {
             {
                 if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.Joystick1Button0))
                 {
+                    G4.LogEvent("ChangedGravity", "GravityDown", "HasPressed", 1);
+
+                    // Builder Hit with all Event parameters.
+                    G4.LogEvent(new EventHitBuilder()
+                        .SetEventCategory("ChangedGravity")
+                        .SetEventAction("GravityDown")
+                        .SetEventLabel("HasPressed")
+                        .SetEventValue(1));
+
+                    Debug.Log("Sent");
+                    Gravity.Play();
                     transform.Rotate(180, 0, 0);
                     OnFloor = true;
                     OnRoof = false;
@@ -135,7 +162,7 @@ public class Player1Script : MonoBehaviour {
             {
                 if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.Joystick1Button0))
                 {
-                    
+                    P1Anim.Play("Jump");
                     IsJumping = true;
                     P1RB.AddForce(Vector3.up * JmpSpd, ForceMode.Impulse);
                 }
@@ -150,7 +177,7 @@ public class Player1Script : MonoBehaviour {
             {
                 if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.Joystick1Button0))
                 {
-                    
+                    P1Anim.Play("Jump");
                     IsJumping = true;
                     P1RB.AddForce(Vector3.down * JmpSpd, ForceMode.Impulse);
                 }
@@ -173,13 +200,32 @@ public class Player1Script : MonoBehaviour {
         Vector3 JoyMov = new Vector3(JoyHaxis, 0, JoyVaxis) * MovSpd * Time.deltaTime;
         if (Input.GetAxis("C1Horizontal") == 0)
         {
-                IsMoving = true;
+               
                 P1RB.MovePosition(transform.position + movement);
         }
         else
         {
+          
             P1RB.MovePosition(transform.position + -JoyMov);
         }
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetAxis("C1Horizontal") < 0 || Input.GetAxis("C1Horizontal") > 0)
+        {
+            IsMoving = true;
+        }
+        else
+        {
+            IsMoving = false;
+        }
+        if (IsMoving == true)
+        {
+            P1Anim.SetBool("Stop", false);
+            P1Anim.Play("Move");
+        }
+        else
+        {
+            P1Anim.SetBool("Stop", true);
+        }
+
      
       
     }
@@ -218,104 +264,128 @@ public class Player1Script : MonoBehaviour {
         }
         if (collision.gameObject.name == "TeleportPadFloor_01")
         {
-                P1Trans.position = new Vector3(15, 21, P1Trans.position.z);
+            Teleport.Play();
+            P1Trans.position = new Vector3(15, 21, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadRoof_01")
         {
+            Teleport.Play();
             P1Trans.position = new Vector3(0, -1, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadFloor_02")
         {
-                P1Trans.position = new Vector3(60, 21, P1Trans.position.z);
+            Teleport.Play();
+            P1Trans.position = new Vector3(60, 21, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadRoof_02")
         {
-                P1Trans.position = new Vector3(35, -1, P1Trans.position.z);
+            Teleport.Play();
+            P1Trans.position = new Vector3(35, -1, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadFloor_03")
         {
+            Teleport.Play();
             P1Trans.position = new Vector3(90, 21, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadRoof_03")
         {
+            Teleport.Play();
             P1Trans.position = new Vector3(110, 14, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadFloor_04")
         {
+            Teleport.Play();
             P1Trans.position = new Vector3(160, 5, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadRoof_04")
         {
+            Teleport.Play();
             P1Trans.position = new Vector3(150, 14, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadFloor_05")
         {
+            Teleport.Play();
             P1Trans.position = new Vector3(150, 5, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadRoof_05")
         {
+            Teleport.Play();
             P1Trans.position = new Vector3(160, 14, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadFloor_06")
         {
+            Teleport.Play();
             P1Trans.position = new Vector3(185, 21, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadRoof_06")
         {
+            Teleport.Play();
             P1Trans.position = new Vector3(185, -1, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadFloor_07")
         {
+            Teleport.Play();
             P1Trans.position = new Vector3(215, 21, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadRoof_07")
         {
+            Teleport.Play();
             P1Trans.position = new Vector3(215, -1, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadFloor_08")
         {
+            Teleport.Play();
             P1Trans.position = new Vector3(235, 5, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadRoof_08")
         {
+            Teleport.Play();
             P1Trans.position = new Vector3(235, 14, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadFloor_09")
         {
+            Teleport.Play();
             P1Trans.position = new Vector3(235, 5, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadFloor_10")
         {
+            Teleport.Play();
             P1Trans.position = new Vector3(235, 5, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadFloor_11")
         {
+            Teleport.Play();
             P1Trans.position = new Vector3(235, 5, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadFloor_12")
         {
+            Teleport.Play();
             P1Trans.position = new Vector3(235, 5, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadRoof_09")
         {
+            Teleport.Play();
             P1Trans.position = new Vector3(235, 14, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadRoof_10")
         {
+            Teleport.Play();
             P1Trans.position = new Vector3(235, 14, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadRoof_11")
         {
+            Teleport.Play();
             P1Trans.position = new Vector3(235, 14, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadRoof_12")
         {
+            Teleport.Play();
             P1Trans.position = new Vector3(235, 14, P1Trans.position.z);
         }
     }
     private void OnCollisionStay(Collision collision)
     {
-        if (collision.gameObject.tag == "Ground")
+            if (collision.gameObject.tag == "Ground")
         {
             IsJumping = false;
             OnFloor = true;
@@ -348,98 +418,122 @@ public class Player1Script : MonoBehaviour {
         }
         if (collision.gameObject.name == "TeleportPadFloor_01")
         {
-                P1Trans.position = new Vector3(15, 21, P1Trans.position.z);
+            Teleport.Play();
+            P1Trans.position = new Vector3(15, 21, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadRoof_01")
         {
+            Teleport.Play();
             P1Trans.position = new Vector3(0, -1, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadFloor_02")
         {
-                P1Trans.position = new Vector3(60, 21, P1Trans.position.z);
+            Teleport.Play();
+            P1Trans.position = new Vector3(60, 21, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadRoof_02")
         {
-                P1Trans.position = new Vector3(35, -1, P1Trans.position.z);
+            Teleport.Play();
+            P1Trans.position = new Vector3(35, -1, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadFloor_03")
         {
+            Teleport.Play();
             P1Trans.position = new Vector3(90, 21, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadRoof_03")
         {
+            Teleport.Play();
             P1Trans.position = new Vector3(110, 14, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadFloor_04")
         {
+            Teleport.Play();
             P1Trans.position = new Vector3(160, 5, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadRoof_04")
         {
+            Teleport.Play();
             P1Trans.position = new Vector3(150, 14, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadFloor_05")
         {
+            Teleport.Play();
             P1Trans.position = new Vector3(150, 5, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadRoof_05")
         {
+            Teleport.Play();
             P1Trans.position = new Vector3(160, 14, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadFloor_06")
         {
+            Teleport.Play();
             P1Trans.position = new Vector3(185, 21, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadRoof_06")
         {
+            Teleport.Play();
             P1Trans.position = new Vector3(185, -1, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadFloor_07")
         {
+            Teleport.Play();
             P1Trans.position = new Vector3(215, 21, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadRoof_07")
         {
+            Teleport.Play();
             P1Trans.position = new Vector3(215, -1, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadFloor_08")
         {
+            Teleport.Play();
             P1Trans.position = new Vector3(235, 5, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadRoof_08")
         {
+            Teleport.Play();
             P1Trans.position = new Vector3(235, 14, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadFloor_09")
         {
+            Teleport.Play();
             P1Trans.position = new Vector3(235, 5, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadFloor_10")
         {
+            Teleport.Play();
             P1Trans.position = new Vector3(235, 5, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadFloor_11")
         {
+            Teleport.Play();
             P1Trans.position = new Vector3(235, 5, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadFloor_12")
         {
+            Teleport.Play();
             P1Trans.position = new Vector3(235, 5, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadRoof_09")
         {
+            Teleport.Play();
             P1Trans.position = new Vector3(235, 14, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadRoof_10")
         {
+            Teleport.Play();
             P1Trans.position = new Vector3(235, 14, P1Trans.position.z);
         }
         if (collision.gameObject.name == "TeleportPadRoof_11")
         {
+            Teleport.Play();
             P1Trans.position = new Vector3(235, 14, P1Trans.position.z);
         }
          if (collision.gameObject.name == "TeleportPadRoof_12")
         {
+            Teleport.Play();
             P1Trans.position = new Vector3(235, 14, P1Trans.position.z);
         }
     }

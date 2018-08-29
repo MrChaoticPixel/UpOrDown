@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Level2UI : MonoBehaviour {
 
+    public GoogleAnalyticsV4 G4;
     public bool Section1, Section2, Section3, Section4, Section5, Section6;
     public Transform Box1, Box2, Box3, Box4, Box5, Box6, Box7, Plyr1, Plyr2;
     public WallProgressionLevel2 SectionOne, SectionTwo, SectionThree, SectionFour, SectionFive, SectionSix;
@@ -71,6 +72,16 @@ public class Level2UI : MonoBehaviour {
     {
         if (BtnM2.Button1 == true & BtnM2.Button2 == true)
         {
+            G4.LogEvent("PressButton", "Section1Timer", "TimeStart", 1);
+
+            // Builder Hit with all Event parameters.
+            G4.LogEvent(new EventHitBuilder()
+                .SetEventCategory("PressButton")
+                .SetEventAction("Section1Timer")
+                .SetEventLabel("TimeStart")
+                .SetEventValue(1));
+
+            Debug.Log("Sent");
             TimerVis.SetActive(true);
             Timer.text = "" + Timer1.ToString ("f2");
             Timer1 = Timer1 - Time.deltaTime;
@@ -82,6 +93,16 @@ public class Level2UI : MonoBehaviour {
         }
         if (BtnM2.Button3 == true & BtnM2.Button4 == true)
         {
+            G4.LogEvent("PressButton", "Section2Timer", "TimeStart", 1);
+
+            // Builder Hit with all Event parameters.
+            G4.LogEvent(new EventHitBuilder()
+                .SetEventCategory("PressButton")
+                .SetEventAction("Section2Timer")
+                .SetEventLabel("TimeStart")
+                .SetEventValue(1));
+
+            Debug.Log("Sent");
             TimerVis.SetActive(true);
             Timer.text = "" + Timer2.ToString("f2");
             Timer2 = Timer2 - Time.deltaTime;
@@ -93,6 +114,16 @@ public class Level2UI : MonoBehaviour {
         }
         if (BtnM2.Button5 == true & BtnM2.Button6 == true & BtnM2.Button7 == true)
         {
+            G4.LogEvent("PressButton", "Section3Timer", "TimeStart", 1);
+
+            // Builder Hit with all Event parameters.
+            G4.LogEvent(new EventHitBuilder()
+                .SetEventCategory("PressButton")
+                .SetEventAction("Section3Timer")
+                .SetEventLabel("TimeStart")
+                .SetEventValue(1));
+
+            Debug.Log("Sent");
             TimerVis.SetActive(true);
             Timer.text = "" + Timer3.ToString("f2");
             Timer3 = Timer3 - Time.deltaTime;
@@ -104,6 +135,16 @@ public class Level2UI : MonoBehaviour {
         }
         if (BtnM2.Button8 == true & BtnM2.Button9 == true & BtnM2.Button10 == true & BtnM2.Button11 == true)
         {
+            G4.LogEvent("PressButton", "Section4Timer", "TimeStart", 1);
+
+            // Builder Hit with all Event parameters.
+            G4.LogEvent(new EventHitBuilder()
+                .SetEventCategory("PressButton")
+                .SetEventAction("Section4Timer")
+                .SetEventLabel("TimeStart")
+                .SetEventValue(1));
+
+            Debug.Log("Sent");
             TimerVis.SetActive(true);
             Timer.text = "" + Timer4.ToString("f2");
             Timer4 = Timer4 - Time.deltaTime;
@@ -115,6 +156,16 @@ public class Level2UI : MonoBehaviour {
         }
         if (BtnM2.Button12 == true & BtnM2.Button13 == true & BtnM2.Button14 == true & BtnM2.Button15 == true)
         {
+            G4.LogEvent("PressButton", "Section5Timer", "TimeStart", 1);
+
+            // Builder Hit with all Event parameters.
+            G4.LogEvent(new EventHitBuilder()
+                .SetEventCategory("PressButton")
+                .SetEventAction("Section5Timer")
+                .SetEventLabel("TimeStart")
+                .SetEventValue(1));
+
+            Debug.Log("Sent");
             TimerVis.SetActive(true);
             Timer.text = "" + Timer5.ToString("f2");
             Timer5 = Timer5 - Time.deltaTime;
@@ -126,6 +177,16 @@ public class Level2UI : MonoBehaviour {
         }
         if (BtnM2.Button16 == true & BtnM2.Button17 == true)
         {
+            G4.LogEvent("PressButton", "Section6Timer", "TimeStart", 1);
+
+            // Builder Hit with all Event parameters.
+            G4.LogEvent(new EventHitBuilder()
+                .SetEventCategory("PressButton")
+                .SetEventAction("Section6Timer")
+                .SetEventLabel("TimeStart")
+                .SetEventValue(1));
+
+            Debug.Log("Sent");
             TimerVis.SetActive(true);
             Timer.text = "" + Timer6.ToString("f2");
             Timer6 = Timer6 - Time.deltaTime;
@@ -204,6 +265,16 @@ public class Level2UI : MonoBehaviour {
     }
     public void HandleResetButton()
     {
+        G4.LogEvent("PressButton", "ResetButtonButton", "HasPressed", 1);
+
+        // Builder Hit with all Event parameters.
+        G4.LogEvent(new EventHitBuilder()
+            .SetEventCategory("PressButton")
+            .SetEventAction("ResetButtonButton")
+            .SetEventLabel("HasPressed")
+            .SetEventValue(1));
+
+        Debug.Log("Sent");
         if (Section1 == true)
         {
             Plyr1.position = new Vector3(-20, Plyr1.position.y, Plyr1.position.z);
