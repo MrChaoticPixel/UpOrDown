@@ -78,13 +78,13 @@ public class Player2Script : MonoBehaviour {
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetAxis("C2Horizontal") > 0)
+        if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetAxis("C2Horizontal") < 0)
         {
             facingright = false;
             facingleft = true;
 
         }
-        if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetAxis("C2Horizontal") < 0)
+        if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetAxis("C2Horizontal") > 0)
         {
             facingright = true;
             facingleft = false;
