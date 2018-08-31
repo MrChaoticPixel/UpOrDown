@@ -1,6 +1,6 @@
-WindowsStandalone
+WebGL
 PlayerPath?
-D:/GitHub Repository/GravShift/UpOrDown/GravShiftWindowsBuild_V1.1/GravShiftWindowsBuild_V1.1.exe
+D:/GitHub Repository/GravShift/UpOrDown/GravShiftWebBuild_V0.1.2
 SceneListBegin?
 Assets/Scenes/Main.unity
 Assets/Scenes/Level 1.unity
